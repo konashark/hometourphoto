@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:i:b:100,300,600');
+@import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
+
+.screen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: #222222;
+    font-family: "Open Sans";
+    font-size: 20px;
+    //font-style: italic;
+    font-weight: lighter;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.topSpacer {
+    height: 130px;
+}
+
+p {
+    padding-top: 5px;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 98px;
+    background-color: #7a4;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#navbarLogo {
+    position: absolute;
+    left: 34px;
+    top: 0px;
+    width: 96px;
+    height: auto;
+}
+
+#navbarName {
+    position: absolute;
+    left: 160px;
+    font-family: "Tangerine";
+    color: #333;
+    font-size: 42px;
+    top: 2px;
+    opacity: .8;
+}
+
+#navbarName2 {
+    position: absolute;
+    left: 162px;
+    font-family: "Tangerine";
+    color: white;
+    font-size: 42px;
+    top: 0px;
+}
+
+#navbarInfo {
+    position: absolute;
+    right: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    top: 6px;
+}
+
+#navbarContainer {
+    position: absolute;
+    left: 147px;
+    top: 40px;
+}
+
+.navOption {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.navOption:hover {
+    text-decoration: underline;
+}
+
+.navOption.selected {
+    font-weight: 600;
+}
+
+#navbarLogo {
+    margin-top: 10px;
+}
+
