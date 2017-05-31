@@ -34,6 +34,7 @@ var HOME_VIEW = {};
 
         '   <div class="row">' +
         '   </div>' +
+        '   <div class="topSpacer"></div>' +
         '</div>');
 
         UTILS.setOpacity('#screen', 1);
