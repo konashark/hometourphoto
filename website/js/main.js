@@ -22,6 +22,11 @@ var G = G || {};
 
         G.stateManager = new StateManager;
         G.stateManager.newState(HOME);
+        G.stateManager.newState(CONTACT);
+        G.stateManager.newState(PORTFOLIO);
+        G.stateManager.newState(PRICING);
+        G.stateManager.newState(SERVICES);
+
         G.stateManager.transitionTo('HOME');   // Can pass object or string ID
     };
 

@@ -1,4 +1,4 @@
-var MODB_MODEL = {};
+var PORTFOLIO_MODEL = {};
 
 (function() {
     var value = 0;
@@ -12,5 +12,5 @@ var MODB_MODEL = {};
     this.set = function (v) {
         value = v;
     };
-}).apply(MODB_MODEL);
+}).apply(PORTFOLIO_MODEL);
 

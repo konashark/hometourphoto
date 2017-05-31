@@ -21,7 +21,7 @@ var HOME_VIEW = {};
         '           <img src="./resources/images/home-1.jpg" class="img-responsive">' +
         '           <p></p></p><p>We serve most of <span class="bold">Sacramento</span> and <span class="bold">Placer</span> counties and can often provide 24 hour turn-around time on our photo processing and editing.</p>' +
         '            <p><span class="bold">Call us today!</span></p><p></p>' +
-        '           <img src="./resources/images/htlogo-128.png" class="img-responsive" style="margin-left:auto; margin-right:auto">' +
+        '           <img src="./resources/images/logo-128.png" class="img-responsive" style="margin-left:auto; margin-right:auto">' +
         '       </div>' +
         '       <div class="col-md-4">' +
         '           <h2>Pro DSLR Imaging</h2>' +
@@ -35,12 +35,20 @@ var HOME_VIEW = {};
         '   <div class="row">' +
         '   </div>' +
         '</div>');
+
+        UTILS.setOpacity('#screen', 1);
     };
 
     // ********************************************
     this.erase = function (callback) {
         console.log('VIEW: Erasing');
-        if (callback) { callback(); }
+        UTILS.setOpacity('#screen', 0);
+        setTimeout( function() {
+            $('#screen').empty();
+            if (typeof callback === 'function') {
+                callback();
+            }
+        }, 300);
     };
 
 }).apply(HOME_VIEW);

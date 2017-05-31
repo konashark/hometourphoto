@@ -1,41 +1,46 @@
-var MODB = {};
+var HOME = {};
 
 (function() {
     var log  = function(str) { console.log(this.id + ': ' + str);}.bind(this);
 
-    this.id = 'MODULEB';
-    this.flags = {};
+    this.id = 'HOME';
+    this.asyncExit = true;
 
     log('Loaded');
 
     // ********************************************
     this.init = function (params) {
-        log('Initializing MODULE-B...');
+        log('Initializing HOME...');
     };
 
     // ********************************************
     this.enter = function (currentState, userData) {
-        log('Entering MODULE-B...');
-        MODB_VIEW.draw();
+        log('Entering HOME...');
+        NAVBAR.open();
+        HOME_VIEW.draw();
     };
 
     // ********************************************
     this.exit = function (callback) {
-        log('Exiting MODULE-B...');
+        log('Exiting HOME...');
         // If you need a little time to do something like an exit animation, you can specify an asyncExit:true flag
         // in the module flags above. If set, this function will be passed a callback function. The state will
         // not transition until the callback is called by this function.
+        HOME_VIEW.erase(callback);
     };
 
     // ********************************************
     this.eventHandler = function (event) {
-        console.log('MODULE-B event handler: ' + event.keyCode);
-        switch (event.keyCode) {
-            case KEYMAP.ENTER:
-                G.stateManager.transitionTo('MODULEA');
-                break;
+        console.log('HOME event handler: ' + event.keyCode);
+        if (event.keyCode) {
+            switch (event.keyCode) {
+                case KEYMAP.ENTER:
+                    G.stateManager.transitionTo('HOME');
+                    break;
+            }
         }
         return false;    // true = consumed, stop propagation
     }
-}).apply(MODB);
+
+}).apply(HOME);
 

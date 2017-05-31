@@ -20,30 +20,30 @@ var NAVBAR = {};
         log('NAVBAR open');
 
         $('#navbar').html(
-            '   <img id="navbarLogo" src="./resources/images/htlogo-96.png">' +
-            '   <div id="navbarName">HomeTour Photography</div>' +
-            '   <div id="navbarName2">HomeTour Photography</div>' +
+            '   <img id="navbarLogo" src="./resources/images/logo-128.png">' +
+            '   <div id="navbarName">HomeTour Photo</div>' +
+            '   <div id="navbarName2">HomeTour Photo</div>' +
             '   <div id="navbarInfo">hometourphoto.com - xxx.xxx.xxxx</div>' +
             '<div id="navbarContainer">' +
             '   <div class="row">' +
-            '       <div id="navbarHome" class="navOption" data-option="0">HOME</div>' +
-            '       <div id="navbarServices" class="navOption" data-option="1">SERVICES</div>' +
-            '       <div id="navbarPricing" class="navOption" data-option="2">PRICING</div>' +
-            '       <div id="navbarPortfolio" class="navOption" data-option="3">PORTFOLIO</div>' +
-            '       <div id="navbarContact" class="navOption" data-option="4">CONTACT</div>' +
+            '       <div id="navbarHome" class="navOption" data-item="0" data-state="HOME">HOME</div>' +
+            '       <div id="navbarServices" class="navOption" data-item="1" data-state="SERVICES">SERVICES</div>' +
+            '       <div id="navbarPricing" class="navOption" data-item="2" data-state="PRICING">PRICING</div>' +
+            '       <div id="navbarPortfolio" class="navOption" data-item="3" data-state="PORTFOLIO">PORTFOLIO</div>' +
+            '       <div id="navbarContact" class="navOption" data-item="4" data-state="CONTACT">CONTACT</div>' +
             '   </div>' +
             '</div>'
         );
 
         // <span class = "glyphicon glyphicon-search"></span>
 
-        $('.navOption').removeClass('selected');
-        $('.navOption').eq(selected).addClass('selected');
+        setFocus();
 
         open = true;
 
         $('.navOption').on('click', function(event) {
-            var item = this.getAttribute('data-option');
+            var item = this.getAttribute('data-state');
+            selected = parseInt(this.getAttribute('data-item'));
             jumpToScreen(item);
         });
     };
@@ -67,10 +67,16 @@ var NAVBAR = {};
     };
 
     // ********************************************
-    var jumpToScreen = function (item) {
-        var screens = ['HOME', 'SERVICES', 'PRICING', 'PORTFOLIO', 'CONTACT'];
-        log('Navigating to screen ' + screens[item]);
-        G.stateManager.transitionTo(screens[item]);
+    var setFocus = function (screen) {
+        $('.navOption').removeClass('selected');
+        $('.navOption').eq(selected).addClass('selected');
+    };
+
+    // ********************************************
+    var jumpToScreen = function (screen) {
+        log('Navigating to screen ' + screen);
+        setFocus();
+        G.stateManager.transitionTo(screen);
     }
 
 }).apply(NAVBAR);
