@@ -27,7 +27,7 @@ var PRICING_VIEW = {};
             '                           <div class=" cancel">$129</div>' +
             '                           <div class="bold red">$99</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">10-15 hand-processed photos. Best for vacant land, Help-U-Sells on a budget, or small businesses/houses. Limited service area.</div>' +
+            '                       <div class="col-sm-8 last">10-12 hand-processed photos. Best for vacant land, Help-U-Sells on a budget, or small businesses/houses. Limited service area.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
@@ -36,22 +36,28 @@ var PRICING_VIEW = {};
             '                           <div class=" cancel">$199</div>' +
             '                           <div class="bold red">$169</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">25-35 quality photos. Best for 2-3 bedroom houses.</div>' +
+            '                       <div class="col-sm-8 last">~20 quality photos. Best for 2-3 bedroom houses.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Premiere</div>' +
             '                       <div class="col-sm-2">' +
             '                           <div class=" cancel">$299</div>' +
-            '                           <div class="bold red">$249</div>' +
+            '                           <div class="bold red">$229</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">40-50 quality photos. Best for 4+ bedroom homes, exteriors and interiors.</div>' +
+            '                       <div class="col-sm-8 last">~30 quality photos. Best for 4+ bedroom homes.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
-            '                       <div class="col-sm-2 bold">Hospitality</div>' +
-            '                       <div class="col-sm-2">Contact us</div>' +
-            '                       <div class="col-sm-8 last">Let us custom make a package for you.</div>' +
+            '                       <div class="col-sm-2 bold">Bonus Regional Photos</div>' +
+            '                       <div class="col-sm-2">INCLUDED</div>' +
+            '                       <div class="col-sm-8 last">Choose any photos from our library of local features and attractions for no additional cost.</div>' +
+            '               </div>' +
+
+            '               <div class="row priceTable">' +
+            '                       <div class="col-sm-2 bold">Decor Prop Staging</div>' +
+            '                       <div class="col-sm-2">INCLUDED</div>' +
+            '                       <div class="col-sm-8 last">At your option, we can provide a few basic staging props (table setting, books, plants, decor objects) for a professional design touch.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
@@ -67,6 +73,12 @@ var PRICING_VIEW = {};
             '               </div>' +
 
             '               <div class="row priceTable">' +
+            '                       <div class="col-sm-2 bold">Multi-Format Photos</div>' +
+            '                       <div class="col-sm-2">INCLUDED</div>' +
+            '                       <div class="col-sm-8 last">For your convenience, we provide the photos in two versions: full resolution, and smaller web-friendly sizes.</div>' +
+            '               </div>' +
+
+            '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Fast Turn-around</div>' +
             '                       <div class="col-sm-2">INCLUDED</div>' +
             '                       <div class="col-sm-8 last">Whenever possible, we strive for 24 hour or less turn-around. Busiest times may require a bit more.</div>' +
@@ -79,16 +91,29 @@ var PRICING_VIEW = {};
             '               </div>' +
 
             '               <div class="row priceTable">' +
-            '                       <div class="col-sm-2 bold">Flexible Billing</div>' +
+            '                       <div class="col-sm-2 bold">Flexible Billing Options</div>' +
             '                       <div class="col-sm-2">INCLUDED</div>' +
             '                       <div class="col-sm-8 last">We accept credit cards, PayPal, or business invoicing.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Extended Service Area</div>' +
-            '                       <div class="col-sm-2">~$25</div>' +
+            '                       <div class="col-sm-2">Contact us</div>' +
             '                       <div class="col-sm-8 last">We service most locations in Placer and Sacramento counties up to 40 miles radius from Auburn. There may be a small fee for out of the way or distant locations.</div>' +
             '               </div>' +
+
+            '               <div class="row priceTable">' +
+            '                       <div class="col-sm-2 bold">Twilight Hours</div>' +
+            '                       <div class="col-sm-2">~$50</div>' +
+            '                       <div class="col-sm-8 last">Based on availability - make your home stand out with a twilight glamour shot!</div>' +
+            '               </div>' +
+
+            '               <div class="row priceTable">' +
+            '                       <div class="col-sm-2 bold">Package Discount</div>' +
+            '                       <div class="col-sm-2">10% OFF</div>' +
+            '                       <div class="col-sm-8 last">Order our most popluar package: photos, video, web page and save 10%!</div>' +
+            '               </div>' +
+
             '           </div>' +
             '       </div>' +
 
@@ -98,8 +123,8 @@ var PRICING_VIEW = {};
             '           <img class="icon col-lg-1 col-md-1 col-sm-12" src="./resources/images/video_camera.svg">' +
             '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
-            '               <h3>High-Definition Videography</h3>' +
-            '               <div>Hand-edited live-action or slide-show videos for Real Estate presentation or of your special event.</div>' +
+            '               <h3>High-Definition Videography / Photo Slideshows</h3>' +
+            '               <div>Hand-edited live-action or slide-show videos for Real Estate presentation or of your special event. (Photo slideshow requires purchase of a photo package)</div>' +
             '               <br>' +
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Video Slideshow</div>' +
@@ -145,7 +170,7 @@ var PRICING_VIEW = {};
             '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '               <h3 >Custom Web Pages</h3>' +
-            '               <p>Not only are we professional photographers, we also design, develop, and deploy customized web pages. Whether it be for you business or your real estate listing, we can give you a custom web page at an incredible price.</p>' +
+            '               <p>Not only are we professional photographers, we also design, develop, and deploy customized web pages. Whether it be for you business or your real estate listing, we can give you a custom web page at an incredible price. Property web page requires purchase of a photo package.</p>' +
             '               <br>' +
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Online Property Flyer</div>' +
