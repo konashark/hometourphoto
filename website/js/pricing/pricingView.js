@@ -27,7 +27,7 @@ var PRICING_VIEW = {};
             '                           <div class=" cancel">$129</div>' +
             '                           <div class="bold red">$99</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">10-12 hand-processed photos. Best for vacant land, Help-U-Sells on a budget, or small businesses/houses. Limited service area.</div>' +
+            '                       <div class="col-sm-8 last">10-12 hand-processed photos. Best for vacant land, listings on a small budget, or small businesses/AirBnBs/houses. Limited service area.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
@@ -45,7 +45,7 @@ var PRICING_VIEW = {};
             '                           <div class=" cancel">$299</div>' +
             '                           <div class="bold red">$229</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">~30 quality photos. Best for 4+ bedroom homes.</div>' +
+            '                       <div class="col-sm-8 last">~30 quality photos. Best for larger or premium properties.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +

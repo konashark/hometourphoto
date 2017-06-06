@@ -50,7 +50,7 @@ h3 {
     font-weight: 600;
     font-size: 22px;
 }
-
+/*
 @media only screen and (max-width: 800px) {
     h1 {
         font-size: 32px;
@@ -68,7 +68,7 @@ h3 {
         font-size: 16px;
     }
 }
-
+*/
 
 .icon {
     width: 128px;
@@ -185,4 +185,23 @@ h3 {
 .red {
     color: red;
     text-decoration: none;
+}
+
+#grid {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.gridCell {
+    display: inline-block;
+    margin: 10px;
+    width: 240px;
+    height: 160px;
+    background-size: cover;
+    overflow: hidden;
+    transition: transform 120ms;
+}
+
+.gridCell:hover {
+    transform: scale(1.05, 1.05);
 }
