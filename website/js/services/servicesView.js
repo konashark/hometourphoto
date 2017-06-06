@@ -45,7 +45,7 @@ var SERVICES_VIEW = {};
             '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '               <h3 >Custom Web Pages</h3>' +
-            '               <p>Not only are we professional photographers, we also design, develop, and deploy customized web pages. Whether it be for you business or your real estate listing, we can give you a custom web page at an incredible price.</p>' +
+            '               <p>Not only are we professional photographers, we also design, develop, and deploy customized web pages. Whether it be for your business or your real estate listing, we can give you a custom web page at an incredible price.</p>' +
             '           </div>' +
             '       </div>' +
             '   </div>' +
