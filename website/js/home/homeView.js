@@ -19,7 +19,7 @@ var HOME_VIEW = {};
         '       </div>' +
         '       <div class="col-xs-12 col-sm-6 col-md-4">' +
         '           <img src="./resources/images/home-1.jpg" class="img-responsive">' +
-        '           <p></p></p><p>We serve most of <span class="bold">Sacramento</span> and <span class="bold">Placer</span> counties and can often provide 24 hour turn-around time on our photo processing and editing.</p>' +
+        '           <p></p></p><p>We are based in the beautiful mountain town of <span class="bold">Colfax, CA</span>, and we serve most of <span class="bold">Placer</span> and <span class="bold">Nevada</span> counties and can often provide 24 hour turn-around time on our photo processing and editing.</p>' +
         '            <p><span class="bold">Call us today!</span></p><p></p>' +
         '           <img src="./resources/images/logo-128.png" class="img-responsive" style="margin-left:auto; margin-right:auto">' +
         '       </div>' +

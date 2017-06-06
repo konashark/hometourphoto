@@ -15,7 +15,7 @@ var CONTACT_VIEW = {};
             '       <br>' +
             '       <div class="row">' +
             '           <span class="col-xs-1"></span>' +
-            '           <h2 style="line-height: 1.25" class="col-xs-10">We service the Placer County and Sacramento region. Please contact us with any questions you may have regarding our service.</h2>' +
+            '           <h2 style="line-height: 1.25" class="col-xs-10">We service the Placer and Nevada County region (Roseville, Auburn, Colfax, Grass Valley, Nevada City, Lake of the Pines, Truckee, etc). Please contact us with any questions you may have regarding our service.</h2>' +
             '           <span class="col-xs-1 contactText"></span>' +
             '       </div>' +
             '       <br>' +
