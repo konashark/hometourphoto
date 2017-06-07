@@ -18,15 +18,37 @@
         <script src="../common/main.js"></script>
 
         <div id="screen" class="screen">
-            <h1 id="heading"></h1>
+
+            <div id="header">
+                <div id="headingRow" class="row">
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-10">
+                        <h1 id="heading"></h1>
+                        <h2 id="price"></h2>
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+
+                <div id="detailsRow" class="row">
+                    <h3 class="col-sm-1"></h3>
+                    <h3 id="bedrooms" class="col-sm-2"></h3>
+                    <h3 id="bathrooms" class="col-sm-2"></h3>
+                    <h3 id="squareFeet" class="col-sm-2"></h3>
+                    <h3 id="lotSize" class="col-sm-2"></h3>
+                    <h3 id="garage" class="col-sm-2"></h3>
+                    <h3 id="" class="col-sm-1"></h3>
+                </div>
+            </div>
+
             <div class="container">
 
                 <div id="sliderRow" class="row">
-
-                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
+                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:450px;height:300px;overflow:hidden;visibility:hidden;">
                         <!-- Loading Screen -->
                         <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url("../../resources/images/jssorimg/loading.gif") no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
-                    <div id="carouselSlides" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
+                    <div id="carouselSlides" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:450px;height:300px;overflow:hidden;">
                         <!-- Insert Slides Here -->
                         <a data-u="any" href="https://www.jssor.com" style="display:none">js slider</a>
                     </div>
@@ -42,6 +64,18 @@
 
                 <div class="sectionSpacer"></div>
 
+                <div id="descriptionRow" class="row">
+                    <div class="col-sm-1"></div>
+                    <div id="description" class="col-sm-10"></div>
+                    <div class="col-sm-1"></div>
+                </div>
+
+                <div class="sectionSpacer"></div>
+
+                <div id="grid"></div>'
+
+                <div class="sectionSpacer"></div>
+
                 <div id="mapRow" class="row">
                     <div id="map" class="col-sm-6"></div>
                     <div id="mapInfo" class="col-sm-6">
@@ -52,6 +86,7 @@
                     </div>
                 </div>
             </div>
+            <div class="spacer"></div>
         </div>
 
     </body>

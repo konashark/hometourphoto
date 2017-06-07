@@ -32,8 +32,7 @@ var PORTFOLIO_VIEW = {};
             '       </div>' +
             '       </div>' +
 
-            '       <div id="grid" class="">' +
-            '       </div>' +
+            '       <div id="grid"></div>' +
             '   </div>' +
             '</div>');
 

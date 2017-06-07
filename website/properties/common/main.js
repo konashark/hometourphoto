@@ -12,7 +12,25 @@ console.log('App is loading...');
     };
 
     var draw = function(params) {
+
+        $('#screen').css( {
+            'background-color': PARAMS.backColor || 'white',
+            'color': PARAMS.foreColor || '#222'
+        });
+
+        $('#header').css( {
+            'background-color': PARAMS.headerBackColor || 'black',
+            'color': PARAMS.headerForeColor || '#eee'
+        });
+
         $('#heading').text(params.address + ' - ' + params.city);
+        $('#price').text('Offered at ' + params.price);
+        $('#description').text(params.description);
+        $('#bedrooms').text('Beds: ' + params.bedrooms);
+        $('#bathrooms').text('Baths: ' + params.bathrooms);
+        $('#squareFeet').text('Sq Ft: ' + params.squareFeet);
+        $('#lotSize').text('Lot Size: ' + params.lotSize);
+        $('#garage').text('Garage: ' + params.garage);
 
         showSlider();
         showMap();
@@ -21,29 +39,19 @@ console.log('App is loading...');
     var showSlider = function () {
         var slideContainer = $('#carouselSlides');
 
-        var params = {};
-        params.images = [
-            { url: './web/' + PARAMS.photoPrefix + '-1.jpg' },
-            { url: './web/' + PARAMS.photoPrefix + '-2.jpg' },
-            { url: './web/' + PARAMS.photoPrefix + '-3.jpg' },
-            { url: './web/' + PARAMS.photoPrefix + '-4.jpg' },
-        ];
-
-        params.images.forEach(function (item, index) {
+        for (var i = 1; i <= PARAMS.numImages; i++) {
             slideContainer.append(
                 '<div>' +
-                '   <img data-u="image" src="' + item.url + '" />' +
+                '   <img class="sliderImage" data-u="image" src="' + PARAMS.imageBase + '-' + i + '.jpg"/>' +
+               // '   <div style="background-color: red; background-image: url(' + PARAMS.imageBase + '-' + i + '.jpg)"></div>' +
+               //     '<div style="color: black"> TEST</div>' +
                 '</div>'
             );
-        });
 
-        /*
-        params.images.forEach(function (item, index) {
             var cell = $('<div class="gridCell"></div>');
-            cell.css('background-image', 'url(' + item.url + ')');
+            cell.css('background-image', 'url(' + PARAMS.imageBase + '-' + i + '.jpg)');
             $('#grid').append(cell);
-        });
-        */
+        }
 
         var jssor_1_SlideshowTransitions = [
             {$Duration:1200,$Opacity:2}
@@ -69,15 +77,10 @@ console.log('App is loading...');
         /*responsive code begin*/
         /*remove responsive code if you don't want the slider scales while window resizing*/
         function ScaleSlider() {
-            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-            if (refSize) {
-                refSize = Math.min(refSize, 600);
-                jssor_1_slider.$ScaleWidth(refSize);
-            }
-            else {
-                window.setTimeout(ScaleSlider, 30);
-            }
+            jssor_1_slider.$ScaleWidth($('.screen').width() *.75);
+            return;
         }
+
         ScaleSlider();
         $(window).bind("load", ScaleSlider);
         $(window).bind("resize", ScaleSlider);
