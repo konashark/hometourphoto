@@ -12,8 +12,8 @@ var HOME_VIEW = {};
         '   <div class="row">' +
         '       <div class="col-xs-12 col-sm-6 col-md-4">' +
         '           <h2>About Us...</h2>' +
-        '           <p>The team at <span class="bold">HomeTour Photography</span> is serious about making your home or business look great. We\'ve been a part of the photography community for over 30 years - everything from managing photo labs, to teaching photographic techniques, to selling our own landscape art photography.</p>' +
-        '           <p> Now, through our family-owned company, <span class="bold">HomeTour Photography</span>, we bring these skills, and love of the art, to real estate and product photography to help make you shine!</p>' +
+        '           <p>The team at <span class="bold">HomeTour Photo</span> is serious about making your home or business look great. We\'ve been a part of the photography community for over 30 years - everything from managing photo labs, to teaching photographic techniques, to selling our own landscape art photography.</p>' +
+        '           <p> Now, through our family-owned company, <span class="bold">HomeTour Photo</span>, we bring these skills, and love of the art, to real estate and product photography to help make you shine!</p>' +
         '           <img src="./resources/images/home-2.jpg" class="img-responsive">' +
 //        '           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>' +
         '       </div>' +

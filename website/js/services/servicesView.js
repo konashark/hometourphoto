@@ -17,7 +17,7 @@ var SERVICES_VIEW = {};
             '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '              <h3>Professional Home Photography</h3>' +
-            '               <div>Experienced photographers using quality DSLR cameras and lighting.</div>' +
+            '               <div>Experienced photographers using quality DSLR cameras, lighting, and professional post-production editing.</div>' +
             '           </div>' +
             '       </div>' +
             '       <div class="row divider"></div>' +
@@ -35,7 +35,7 @@ var SERVICES_VIEW = {};
             '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '               <h3>High-Definition Aerial Photography</h3>' +
-            '               <div>COMING SOON: Set yourself apart by adding amazing aerial photos or videos to your property listing!</div>' +
+            '               <div>Set yourself apart by adding amazing aerial photos or videos to your property listing!</div>' +
             '               <div>Note: by law, this service is not available in all areas, and is subject to local terrain.</div>' +
             '           </div>' +
             '       </div>' +

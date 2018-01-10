@@ -23,7 +23,7 @@ var NAVBAR = {};
             '   <img id="navbarLogo" src="./resources/images/logo-128.png">' +
             '   <div id="navbarName">HomeTour Photo</div>' +
             '   <div id="navbarName2">HomeTour Photo</div>' +
-            '   <div id="navbarInfo">hometourphoto.com - xxx.xxx.xxxx</div>' +
+            '   <div id="navbarInfo">hometourphoto.com - 530.210.7963 / 669.327.9545</div>' +
             '<div id="navbarContainer">' +
             '   <div class="row">' +
             '       <div id="navbarHome" class="navOption" data-item="0" data-state="HOME">HOME</div>' +

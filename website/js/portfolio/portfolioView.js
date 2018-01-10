@@ -38,15 +38,10 @@ var PORTFOLIO_VIEW = {};
 
         var slideContainer = $('#carouselSlides');
 
-        params = {};
-        params.images = [
-            { url: 'resources/images/jssorimg/02.jpg' },
-            { url: 'resources/images/jssorimg/04.jpg' },
-            { url: 'resources/images/jssorimg/05.jpg' },
-            { url: 'resources/images/jssorimg/09.jpg' }
-        ];
+        var spotlight = PORTFOLIO_MODEL.getSpotlightData();
+        var portfolio = PORTFOLIO_MODEL.getPortfolioData();
 
-        params.images.forEach(function (item, index) {
+        spotlight.forEach(function (item, index) {
             slideContainer.append(
                 '<div>' +
                 '   <img data-u="image" src="' + item.url + '" />' +
@@ -54,18 +49,56 @@ var PORTFOLIO_VIEW = {};
             );
         });
 
-        params.images.forEach(function (item, index) {
-            var cell = $('<div class="gridCell"></div>');
-            cell.css('background-image', 'url(' + item.url + ')');
-            $('#grid').append(cell);
+        portfolio.forEach(function (port, index) {
+            $('#grid').append(
+                '       <div class="row">' +
+                '           <h2 class="portfolioLabel">' + port.label + '</h2>' +
+                '       </div>'
+            );
+
+            portfolio[index].images.forEach(function (item, index) {
+                var cell = $('<div class="gridCell"></div>');
+                cell.css('background-image', 'url(' + item.url + ')');
+                cell[0].IMAGE_URL = item.url;
+                $('#grid').append(cell);
+                cell.on('click', function() {
+                    showFloatingWindow(this.IMAGE_URL);
+                    return false;
+                });
+            });
+        });
+
+        // Remove the floating window if user clicks anywhere on page except for another grid cell
+        $('#portfolioScreen').on('click', function() {
+            $('.portfolioFloat').remove();
+            UTILS.setOpacity('.container', 1);
         });
 
         UTILS.setOpacity('#screen', 1);
     };
 
     // ********************************************
+    var showFloatingWindow = function (url) {
+        $('.portfolioFloat').remove();
+        $('#portfolioScreen').append(
+            '<div class="portfolioFloat">' +
+            '   <div class="portfolioFloatImage"></div>' +
+            '</div>'
+        );
+        $('.portfolioFloat').css({
+            'height': parseInt($('.portfolioFloat').width() * .6666)
+        });
+        $('.portfolioFloatImage').css({
+            'background-image': 'url(' + url + ')'
+        });
+
+        UTILS.setOpacity('.container',.5);
+    };
+
+    // ********************************************
     this.erase = function (callback) {
         console.log('VIEW: Erasing');
+        $('.portfolioFloat').remove();
         UTILS.setOpacity('#screen', 0);
         setTimeout( function() {
             $('#screen').empty();

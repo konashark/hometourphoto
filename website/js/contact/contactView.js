@@ -22,7 +22,7 @@ var CONTACT_VIEW = {};
             '       <div class="row">' +
             '           <span class="col-xs-1"></span>' +
             '           <span class="col-xs-1 glyphicon glyphicon-earphone contactIcon"></span>' +
-            '           <span class="col-xs-10 contactText">Phone: xxx.xxx.xxxx</span>' +
+            '           <span class="col-xs-10 contactText">Phone: 530.210.7963 / 669.327.9545</span>' +
             '       </div>' +
             '       <br>' +
             '       <div class="row">' +
