@@ -15,42 +15,115 @@ console.log('App is loading...');
 
         $('#screen').css( {
             'background-color': PARAMS.backColor || 'white',
-            'color': PARAMS.foreColor || '#222'
+            'background-image': 'url(' + PARAMS.backTile + ')'
         });
 
-        $('#header').css( {
-            'background-color': PARAMS.headerBackColor || 'black',
-            'color': PARAMS.headerForeColor || '#eee'
+        $('.panel').css( {
+            'background-color': PARAMS.panelColor || 'black',
+            'color': PARAMS.panelTextColor || '#eee'
+        });
+
+        $('#addressBlock').css( {
+            'background-color': PARAMS.addressBackColor || 'black',
+            'color': PARAMS.addressForeColor || '#eee'
+        });
+
+        $('#detailsBlock').css( {
+            'background-color': PARAMS.detailsBackColor || 'black',
+            'color': PARAMS.detailsForeColor || '#eee'
+        });
+
+        $('.sectionSpacer').css( {
+            'background-color': PARAMS.dividerColor || 'white',
+        });
+
+        $('.sectionHeader').css( {
+            'color': PARAMS.sectionHeaderColor || '#eee'
         });
 
         $('#heading').text(params.address + ' - ' + params.city);
-        $('#price').text('Offered at ' + params.price);
+        $('#price').text('OFFERED AT ' + params.price);
         $('#description').text(params.description);
         $('#bedrooms').text('Beds: ' + params.bedrooms);
         $('#bathrooms').text('Baths: ' + params.bathrooms);
         $('#squareFeet').text('Sq Ft: ' + params.squareFeet);
         $('#lotSize').text('Lot Size: ' + params.lotSize);
         $('#garage').text('Garage: ' + params.garage);
+        $('#agentName').text(params.agentName);
+        $('#agentPhone').text(params.agentPhone);
+        $('#agentUrl').text(params.agentUrl);
+        $('#agentLicense').text(params.agentLicense);
+        $('#brokerLicense').text('Broker Lic: ' + params.brokerLicense);
 
-        showSlider();
-        showMap();
+        if (PARAMS.brokerLogo.length) {
+            $('#brokerLogo')[0].src = PARAMS.brokerLogo;
+        }
+        if (PARAMS.agentPhoto.length) {
+            $('#agentPhoto')[0].src = PARAMS.agentPhoto;
+        }
+
+        $('#agentEmail').html('<a href="mailto:' + PARAMS.agentEmail + '?Subject=Regarding%20MLS%20' + PARAMS.mls + '"target="_top">'+ PARAMS.agentEmail + '</a>');
+        $('#agentUrl').html('<a href="' + PARAMS.agentUrl + '">Property Listing</a>');
+        $('#brokerUrl').html('<a href="' + PARAMS.brokerUrl + '">' + PARAMS.brokerUrlName + '</a>');
+
+        if (PARAMS.hideSlideshow || PARAMS.imageList.length < 1) {
+            $('#slideshowContainer').html('');
+        } else {
+            showSlider();
+        }
+
+        if (PARAMS.hideGallery || PARAMS.imageList.length < 1) {
+            $('#galleryContainer').html('');
+        } else {
+            showGallery();
+        }
+
+        if (PARAMS.hideDescription || PARAMS.description.length < 5) {
+            $('#descriptionContainer').html('');
+        }
+
+        if (PARAMS.hideVideoTour || !PARAMS.videoTourUrl.length) {
+            $('#videoTourContainer').html('');
+        } else {
+            $('.videoContainer', '#videoTourContainer').append(
+                '<iframe src="' + PARAMS.videoTourUrl + '" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+            );
+        }
+
+        if (PARAMS.hideAerialTour || !PARAMS.videoAerialUrl.length) {
+            $('#videoAerialContainer').html('');
+        } else {
+            $('.videoContainer', '#videoAerialContainer').append(
+                '<iframe src="' + PARAMS.videoAerialUrl + '" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+            );
+        }
+
+        if (PARAMS.hideLocation || !PARAMS.latitude) {
+            $('#locationContainer').html('');
+        } else {
+            showMap();
+        }
     };
 
+    // ***************************************
+    var showGallery = function () {
+        for (var i = 0; i < PARAMS.imageList.length; i++) {
+            var cell = $('<div class="gridCell"></div>');
+            cell.css('background-image', 'url(' + PARAMS.imageList[i] + ')');
+            $('#grid').append(cell);
+        }
+    };
+
+    // ***************************************
     var showSlider = function () {
         var slideContainer = $('#carouselSlides');
 
-        for (var i = 1; i <= PARAMS.numImages; i++) {
+        for (var i = 0; i < PARAMS.imageList.length; i++) {
             slideContainer.append(
                 '<div>' +
-                '   <img class="sliderImage" data-u="image" src="' + PARAMS.imageBase + '-' + i + '.jpg"/>' +
-               // '   <div style="background-color: red; background-image: url(' + PARAMS.imageBase + '-' + i + '.jpg)"></div>' +
-               //     '<div style="color: black"> TEST</div>' +
+                '   <img class="sliderImage" data-u="image" src="' + PARAMS.imageList[i] + '"/>' +
                 '</div>'
             );
-
-            var cell = $('<div class="gridCell"></div>');
-            cell.css('background-image', 'url(' + PARAMS.imageBase + '-' + i + '.jpg)');
-            $('#grid').append(cell);
         }
 
         var jssor_1_SlideshowTransitions = [
@@ -77,7 +150,7 @@ console.log('App is loading...');
         /*responsive code begin*/
         /*remove responsive code if you don't want the slider scales while window resizing*/
         function ScaleSlider() {
-            jssor_1_slider.$ScaleWidth($('.screen').width() *.75);
+            jssor_1_slider.$ScaleWidth($('.screen').width() *.6);
             return;
         }
 
@@ -92,7 +165,7 @@ console.log('App is loading...');
     var showMap = function() {
         //$('#map').html('<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>');
 
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var map = new google.maps.Map(document.getElementById('mapInset'), {
             center: {lat: PARAMS.latitude, lng: PARAMS.longitude},
             zoom: 15
         });
