@@ -18,7 +18,7 @@ var PRICING_VIEW = {};
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '               <h3>Professional Home Photography</h3>' +
             '               <div>It is our goal to provide the best quality service and the best prices. We try to keep the pricing as simple and straightforward as possible, but we also want to be able to provide a professional product for all budgets so you don\'t have to pay for what you don\'t need.</div>' +
-            '               <div class="red">Introductory specials now available in the Placer and Nevada County regions!</div>' +
+            '               <div class="red">2018 Introductory specials now available in the Placer and Nevada County regions!</div>' +
             '               <br>' +
 
             '               <div class="row priceTable">' +
@@ -27,7 +27,7 @@ var PRICING_VIEW = {};
             '                           <div class=" cancel">$129</div>' +
             '                           <div class="bold red">$99</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">10-12 hand-processed photos. Best for vacant land, listings on a small budget, or small businesses or BnBs. Limited service area at this price.</div>' +
+            '                       <div class="col-sm-8 last">5-10 hand-processed photos. Best for vacant land, listings on a small budget, or small businesses or BnBs. Limited service area at this price.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
@@ -36,14 +36,14 @@ var PRICING_VIEW = {};
             '                           <div class=" cancel">$199</div>' +
             '                           <div class="bold red">$169</div>' +
             '                       </div>' +
-            '                       <div class="col-sm-8 last">20-25 quality photos. Best for 2-3 bedroom houses.</div>' +
+            '                       <div class="col-sm-8 last">~20 quality photos. Best for 2-3 bedroom houses.</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Premiere</div>' +
             '                       <div class="col-sm-2">' +
-            '                           <div class=" cancel">$299</div>' +
-            '                           <div class="bold red">$229</div>' +
+            '                           <div class=" cancel">$269</div>' +
+            '                           <div class="bold red">$199</div>' +
             '                       </div>' +
             '                       <div class="col-sm-8 last">~30-35 quality photos. Best for larger or premium properties.</div>' +
             '               </div>' +
@@ -51,12 +51,11 @@ var PRICING_VIEW = {};
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Estate</div>' +
             '                       <div class="col-sm-2">' +
-            '                           <div class=" cancel">$399</div>' +
-            '                           <div class="bold red">$349</div>' +
+            '                           <div class=" cancel">$349</div>' +
+            '                           <div class="bold red">$249</div>' +
             '                       </div>' +
             '                       <div class="col-sm-8 last">50+ quality photos for special properties. Best for larger or premium properties with landscaping and interior decorating.</div>' +
             '               </div>' +
-
 
             '               <div class="row priceTable">' +
             '                       <div class="col-sm-2 bold">Virtual Tour Video</div>' +
@@ -65,6 +64,24 @@ var PRICING_VIEW = {};
             '                           <div class="bold red">$49</div>' +
             '                       </div>' +
             '                       <div class="col-sm-8 last">Add a professional 1.5-3 minute video slideshow featuring all the amazing photos of your property, titles with the agent contact info, and professional music.</div>' +
+            '               </div>' +
+
+            '               <div class="row priceTable">' +
+            '                       <div class="col-sm-2 bold">Custom Flyer</div>' +
+            '                       <div class="col-sm-2">' +
+            '                           <div class=" cancel">$49</div>' +
+            '                           <div class="bold red">$39</div>' +
+            '                       </div>' +
+            '                       <div class="col-sm-8 last">Let us turn your new photos into an attractive, modern sales flyer. Delivered as a .pdf or .jpg file.</div>' +
+            '               </div>' +
+
+            '               <div class="row priceTable">' +
+            '                       <div class="col-sm-2 bold">Custom Web Page</div>' +
+            '                       <div class="col-sm-2">' +
+            '                           <div class=" cancel">$69</div>' +
+            '                           <div class="bold red">$49</div>' +
+            '                       </div>' +
+            '                       <div class="col-sm-8 last">We can create a custom web page (hometourphoto.com sub-page) that showcases your photos, video slideshows, maps, agent contact info, links and more!</div>' +
             '               </div>' +
 
             '               <div class="row priceTable">' +

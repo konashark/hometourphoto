@@ -3,18 +3,33 @@ console.log('App is loading...');
 
 (function() {
 
+    // ***************************************
     this.init = function () {
         console.log('Initializing...');
 
-        document.addEventListener('keydown', eventHandler);
+        // We may have to wait for the template to finish loading
 
-        draw(PARAMS);
+        var counter = 0;
+
+        var pollForLoad = function () {
+            if (document.getElementById('brokerLogo') == null && counter < 10) {
+                counter++;
+                console.log("Page loaded poll: " + counter);
+                setTimeout(pollForLoad, 1000);
+            } else {
+                draw(PARAMS);
+            }
+        };
+
+        pollForLoad();
     };
 
+    // ***************************************
     var draw = function(params) {
 
         $('#screen').css( {
             'background-color': PARAMS.backColor || 'white',
+            'color': PARAMS.foreColor || 'white',
             'background-image': 'url(' + PARAMS.backTile + ')'
         });
 
@@ -162,12 +177,13 @@ console.log('App is loading...');
 
     };
 
+    // ***************************************
     var showMap = function() {
         //$('#map').html('<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>');
 
         var map = new google.maps.Map(document.getElementById('mapInset'), {
             center: {lat: PARAMS.latitude, lng: PARAMS.longitude},
-            zoom: 15
+            zoom: 16
         });
 
         $('#mapAddress').text(PARAMS.address);
@@ -180,23 +196,7 @@ console.log('App is loading...');
         //output.appendChild(img);
     };
 
-
-
-    // ********************************************
-    // All events from the document or from the event bus are routed through this handler, which then
-    // distributes the event to the current handler or handled here if not consumed
-    // ********************************************
-    var eventHandler = function (event, payload) {
-
-        switch (event.keyCode) {
-            default:
-                console.log('Key ' + event.keyCode + ' was not handled');
-                break;
-        }
-
-    }.bind(this);
-
-}).apply(MAIN);
+ }).apply(MAIN);
 
 
 //******************************
