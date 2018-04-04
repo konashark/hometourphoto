@@ -23,7 +23,7 @@ PARAMS = {
     price: '$479,000',
     latitude: 39.037365,
     longitude: -120.969762,
-    videoTourUrl: 'https://player.vimeo.com/video/224798665',
+    videoTourUrl: '',
     videoAerialUrl: '',
 
     description: "Escape to  lovely mountain views from the top of 3.1 acres. Quality built 2060 sq.ft 3-4 bedroom, 2 bath home. Plenty of room for garden and fruit trees. Open living room, formal dining, and sun-filled breakfast nook. Wake up to mountain views from your master suite with huge walk-in closet and bath with soaking tub. Engineered flooring through most rooms. 4th bedroom or office set up perfect for guest quarters. Workshop in garage, spring fed pond, and extra detached 600 sq.ft. drive-through detached garage!",
@@ -56,13 +56,14 @@ PARAMS = {
         './web/montana-10.jpg',
         './web/montana-11.jpg',
         './web/montana-13.jpg',
-        './web/montana-15.jpg',
-        './web/montana-17.jpg',
+        //'./web/montana-15.jpg',
+        //'./web/montana-17.jpg',
+        './web/montana-44.jpg', //
         './web/montana-20.jpg',
         './web/montana-21.jpg',
         './web/montana-22.jpg',
         './web/montana-23.jpg',
-        './web/montana-24.jpg',
+        //'./web/montana-24.jpg', //
         './web/montana-25.jpg',
         './web/montana-27.jpg',
         './web/montana-28.jpg',
@@ -70,17 +71,16 @@ PARAMS = {
         './web/montana-30.jpg',
         './web/montana-31.jpg',
         './web/montana-32.jpg',
-        './web/montana-33.jpg',
+        //'./web/montana-33.jpg', //
         './web/montana-34.jpg',
         './web/montana-35.jpg',
-        './web/montana-36.jpg',
+        //'./web/montana-36.jpg', //
         './web/montana-38.jpg',
         './web/montana-39.jpg',
         './web/montana-40.jpg',
         './web/montana-42.jpg',
-        './web/montana-43.jpg',
-        './web/montana-44.jpg',
-        './web/montana-45.jpg',
-        './web/montana-46.jpg'
+        //'./web/montana-43.jpg', //
+        //'./web/montana-45.jpg', //
+        //'./web/montana-46.jpg'
     ]
 };

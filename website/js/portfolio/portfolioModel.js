@@ -79,5 +79,14 @@ var PORTFOLIO_MODEL = {};
         return portfolio;
     };
 
+    // ********************************************
+    this.getPropertyPages = function () {
+        return [
+            { label: "Montana Lane, Colfax", url: 'http://www.hometourphoto.com/properties/MontanaLane' },
+            { label: "Oak Ridge Drive, Colfax", url: 'http://www.hometourphoto.com/properties/1384OakRidge' }
+        ];
+    };
+
+
 }).apply(PORTFOLIO_MODEL);
 

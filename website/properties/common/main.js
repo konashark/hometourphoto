@@ -59,11 +59,37 @@ console.log('App is loading...');
         $('#heading').text(params.address + ' - ' + params.city);
         $('#price').text('OFFERED AT ' + params.price);
         $('#description').text(params.description);
-        $('#bedrooms').text('Beds: ' + params.bedrooms);
-        $('#bathrooms').text('Baths: ' + params.bathrooms);
-        $('#squareFeet').text('Sq Ft: ' + params.squareFeet);
-        $('#lotSize').text('Lot Size: ' + params.lotSize);
-        $('#garage').text('Garage: ' + params.garage);
+
+        if (params.bedrooms) {
+            $('#bedrooms').text('Beds: ' + params.bedrooms);
+        } else {
+            $('#bedrooms').remove();
+        }
+
+        if (params.bathrooms) {
+            $('#bathrooms').text('Baths: ' + params.bathrooms);
+        } else {
+            $('#bathrooms').remove();
+        }
+
+        if (params.squareFeet) {
+            $('#squareFeet').text('Sq Ft: ' + params.squareFeet);
+        } else {
+            $('#squareFeet').remove();
+        }
+
+        if (params.lotSize) {
+            $('#lotSize').text('Lot Size: ' + params.lotSize);
+        } else {
+            $('#lotSize').remove();
+        }
+
+        if (params.garage) {
+            $('#garage').text('Garage: ' + params.garage);
+        } else {
+            $('#garage').remove();
+        }
+
         $('#agentName').text(params.agentName);
         $('#agentPhone').text(params.agentPhone);
         $('#agentUrl').text(params.agentUrl);

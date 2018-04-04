@@ -33,6 +33,9 @@ var PORTFOLIO_VIEW = {};
             '       </div>' +
 
             '       <div id="grid"></div>' +
+            '       <div id="pages">' +
+            '           <h3 id="pages-header">Online Flyer Pages</h3>' +
+            '       </div>' +
             '   </div>' +
             '</div>');
 
@@ -40,6 +43,7 @@ var PORTFOLIO_VIEW = {};
 
         var spotlight = PORTFOLIO_MODEL.getSpotlightData();
         var portfolio = PORTFOLIO_MODEL.getPortfolioData();
+        var pages = PORTFOLIO_MODEL.getPropertyPages();
 
         spotlight.forEach(function (item, index) {
             slideContainer.append(
@@ -67,6 +71,15 @@ var PORTFOLIO_VIEW = {};
                 });
             });
         });
+
+        pages.forEach(function (item, index) {
+            $('#pages').append(
+                '<h3>' +
+                '   <a href="' + item.url + '">' + item.label + '</a>' +
+                '</h3>'
+            );
+        });
+
 
         // Remove the floating window if user clicks anywhere on page except for another grid cell
         $('#portfolioScreen').on('click', function() {

@@ -218,6 +218,15 @@ h3 {
     background-size: contain;
 }
 
+#pages {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#pages-header {
+    color: black;
+}
+
 .gridCell {
     display: inline-block;
     margin: 10px;
