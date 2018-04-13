@@ -4,6 +4,7 @@ var HOME = {};
     var log  = function(str) { console.log(this.id + ': ' + str);}.bind(this);
 
     this.id = 'HOME';
+    this.route = 'home';
     this.asyncExit = true;
 
     log('Loaded');
@@ -16,7 +17,6 @@ var HOME = {};
     // ********************************************
     this.enter = function (currentState, userData) {
         log('Entering HOME...');
-        NAVBAR.open();
         HOME_VIEW.draw();
     };
 

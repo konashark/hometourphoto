@@ -4,6 +4,7 @@ var PORTFOLIO = {};
     var log  = function(str) { console.log(this.id + ': ' + str);}.bind(this);
 
     this.id = 'PORTFOLIO';
+    this.route = 'portfolio';
     this.asyncExit = true;
 
     log('Loaded');

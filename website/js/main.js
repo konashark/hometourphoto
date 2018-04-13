@@ -16,6 +16,8 @@ var G = G || {};
             }
         });
 
+        NAVBAR.open();
+
         G.eventMgr =  new EventBus();   // A tiny utility that allows us to send events within the app
         G.eventMgr.addListener(defaultEventHandler);
         G.eventMgr.dispatchEvent({ customType: 'Event Manager installed...' });
@@ -27,7 +29,12 @@ var G = G || {};
         G.stateManager.newState(PRICING);
         G.stateManager.newState(SERVICES);
 
-        G.stateManager.transitionTo('HOME');   // Can pass object or string ID
+        var route = G.stateManager.getCurrentRoute();
+        if (route && route.length) {
+            G.stateManager.routeTo(route);
+        } else {
+            G.stateManager.routeTo('home');
+        }
     };
 
     // ********************************************

@@ -19,6 +19,7 @@ StateManager.prototype.newState = function(params){
     //      exit            - callback function
 
     var state = {};
+    state.route         = params.route || "UNDEFINED";
     state.id            = params.id || "UNDEFINED";
     state.enter         = params.enter || function() { console.log("'enter' not implemented"); };
     state.exit          = params.exit || function() { console.log("'exit' not implemented"); };
@@ -102,28 +103,49 @@ StateManager.prototype.transitionBack = function(){
 };
 
 //*****************************************************
+StateManager.prototype.routeTo = function(route) {
+    var sm = this;
+    if (route && route.length) {
+        this.stateList.forEach(function(state) {
+            if (route === state.route) {
+                sm.transitionTo(state.id);
+                location.hash = route;
+            }
+        });
+    }
+};
+
+//*****************************************************
+StateManager.prototype.getCurrentRoute = function() {
+    return location.hash.substr(1);
+};
+
+//*****************************************************
 StateManager.prototype.privateDoTransition = function(oldState, newState, stateData){
     var self = this;
+
+    var callEnter = function () {
+        newState.enter(self.currentState ? self.currentState.id : "UNDEFINED", stateData);
+        if (newState.route) {
+            location.hash = newState.route;
+        }
+        self.currentState = newState;
+        console.log("CURRENT STATE: " + newState.id);
+    };
 
     // Tell old state that it's going away
     if (oldState && oldState.exit) {
 
         if (oldState.asyncExit) {
             oldState.exit(function() {
-                newState.enter(self.currentState ? self.currentState.id : "UNDEFINED", stateData);
-                self.currentState = newState;
-                console.log("CURRENT STATE: " + newState.id);
+                callEnter();
             }, oldState.id, newState.id);    // old state, new state
         } else {
             returnData = oldState.exit(oldState.id, newState.id);
-            newState.enter(self.currentState ? self.currentState.id : "UNDEFINED", stateData);
-            self.currentState = newState;
-            console.log("CURRENT STATE: " + newState.id);
+            callEnter();
         }
 
     } else {
-        newState.enter(self.currentState ? self.currentState.id : "UNDEFINED", stateData);
-        self.currentState = newState;
-        console.log("CURRENT STATE: " + newState.id);
+        callEnter();
     }
 };

@@ -4,6 +4,7 @@ var SERVICES = {};
     var log  = function(str) { console.log(this.id + ': ' + str);}.bind(this);
 
     this.id = 'SERVICES';
+    this.route = 'services';
     this.asyncExit = true;
 
     log('Loaded');

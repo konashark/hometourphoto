@@ -4,6 +4,7 @@ var PRICING = {};
     var log  = function(str) { console.log(this.id + ': ' + str);}.bind(this);
 
     this.id = 'PRICING';
+    this.route = 'pricing';
     this.asyncExit = true;
 
     log('Loaded');

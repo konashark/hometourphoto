@@ -4,6 +4,7 @@ var CONTACT = {};
     var log  = function(str) { console.log(this.id + ': ' + str);}.bind(this);
 
     this.id = 'CONTACT';
+    this.route = 'contact';
     this.asyncExit = true;
 
     log('Loaded');
