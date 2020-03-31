@@ -1,0 +1,86 @@
+PARAMS = {
+    hideSlideshow: false,
+    hideGallery: false,
+    hideDescription: false,
+    hideLocation: false,
+    hideVideoTour: false,
+    hideAerialTour: false,
+
+    backTile: '../common/dkgray-tile.png',
+    backColor: '#fff',
+    foreColor: '#e8e8e8',
+    panelColor: '#002',
+    panelTextColor: '#e8e8e8',
+    dividerColor: '#fff',
+    addressBackColor: '#123',
+    addressForeColor: '#e8e8e8',
+    detailsBackColor: '#123',
+    detailsForeColor: '#e8e8e8',
+    sectionHeaderColor: '#ffcc00',
+
+    address: '20365 MONTANA LANE',
+    city: 'COLFAX CA 95713',
+    price: '$479,000',
+    latitude: 39.037365,
+    longitude: -120.969762,
+    videoTourUrl: '',
+    videoAerialUrl: '',
+
+    description: "Escape to  lovely mountain views from the top of 3.1 acres. Quality built 2060 sq.ft 3-4 bedroom, 2 bath home. Plenty of room for garden and fruit trees. Open living room, formal dining, and sun-filled breakfast nook. Wake up to mountain views from your master suite with huge walk-in closet and bath with soaking tub. Engineered flooring through most rooms. 4th bedroom or office set up perfect for guest quarters. Workshop in garage, spring fed pond, and extra detached 600 sq.ft. drive-through detached garage!",
+    bedrooms: '3-4',
+    bathrooms: 2,
+    squareFeet: 2060,
+    lotSize: '3.1 acres',
+    garage: '2+',
+    mls: '18009559',
+
+    brokerLogo: './sjr.jpg',
+    agentPhoto: './kathleen.jpg',
+    agentName: 'Kathleen Klopson',
+    agentPhone: '831-234-9148',
+    agentLicense: 'Cal BRE# 01133047',
+    agentEmail: 'kklopson@gmail.com',
+    agentUrl: 'http://www.sierrajunction.com/3/For-Sale',
+    brokerUrl: 'http://www.sierrajunction.com',
+    brokerUrlName: 'www.sierrajunction.com',
+    brokerLicense: '01311771',
+
+    imageList: [
+        './web/montana-1.jpg',
+        './web/montana-2.jpg',
+        './web/montana-3.jpg',
+        './web/montana-6.jpg',
+        './web/montana-7.jpg',
+        './web/montana-8.jpg',
+        './web/montana-9.jpg',
+        './web/montana-10.jpg',
+        './web/montana-11.jpg',
+        './web/montana-13.jpg',
+        //'./web/montana-15.jpg',
+        //'./web/montana-17.jpg',
+        './web/montana-44.jpg', //
+        './web/montana-20.jpg',
+        './web/montana-21.jpg',
+        './web/montana-22.jpg',
+        './web/montana-23.jpg',
+        //'./web/montana-24.jpg', //
+        './web/montana-25.jpg',
+        './web/montana-27.jpg',
+        './web/montana-28.jpg',
+        './web/montana-29.jpg',
+        './web/montana-30.jpg',
+        './web/montana-31.jpg',
+        './web/montana-32.jpg',
+        //'./web/montana-33.jpg', //
+        './web/montana-34.jpg',
+        './web/montana-35.jpg',
+        //'./web/montana-36.jpg', //
+        './web/montana-38.jpg',
+        './web/montana-39.jpg',
+        './web/montana-40.jpg',
+        './web/montana-42.jpg',
+        //'./web/montana-43.jpg', //
+        //'./web/montana-45.jpg', //
+        //'./web/montana-46.jpg'
+    ]
+};

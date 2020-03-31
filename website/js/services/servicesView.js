@@ -17,7 +17,7 @@ var SERVICES_VIEW = {};
             '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '              <h3>Professional Home Photography</h3>' +
-            '               <div>Experienced photographers using quality DSLR cameras, lighting, and professional post-production editing.</div>' +
+            '               <div>Experienced photographers using quality DSLR cameras, lighting, and professional post-production editing. Portraits, such as for agent profiles, can also be arranged.</div>' +
             '           </div>' +
             '       </div>' +
             '       <div class="row divider"></div>' +
@@ -46,6 +46,15 @@ var SERVICES_VIEW = {};
             '           <div class="col-lg-10 col-md-10 col-sm-12">' +
             '               <h3 >Custom Web Pages</h3>' +
             '               <p>Not only are we professional photographers, we also design, develop, and deploy customized web pages. Whether it be for your business or your real estate listing, we can give you a custom web page at an incredible price.</p>' +
+            '           </div>' +
+            '       </div>' +
+            '       <div></div><div class="row divider"></div>' +
+            '       <div class="row">' +
+            '           <img class="icon col-lg-1 col-md-1 col-sm-12" src="./resources/images/logo-128.png">' +
+            '           <div class="col-lg-1 col-md-1 col-sm-12"></div>' +
+            '           <div class="col-lg-10 col-md-10 col-sm-12">' +
+            '               <h3 >Electronic Delivery</h3>' +
+            '               <p>All products are delivered electronically. You will receive a web link to a collaborative web page from which you can download your photos/videos/documents.</p>' +
             '           </div>' +
             '       </div>' +
             '   </div>' +

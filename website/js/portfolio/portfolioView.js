@@ -35,6 +35,7 @@ var PORTFOLIO_VIEW = {};
             '       <div id="grid"></div>' +
             '       <div id="pages">' +
             '           <h3 id="pages-header">Online Flyer Pages</h3>' +
+            '           Note: these are examples only. These properties are no longer for sale.' +
             '       </div>' +
             '   </div>' +
             '</div>');
